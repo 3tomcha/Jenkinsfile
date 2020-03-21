@@ -1,9 +1,9 @@
 pipeline {
     agent any
-    def singlyQuoted = 'Hello' 
     stages {
         stage('Deploy') {
             steps {
+                def singlyQuoted = 'Hello' 
                 echo "Helloは${singlyQuoted}"
             }
         }

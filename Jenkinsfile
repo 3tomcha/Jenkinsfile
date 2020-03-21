@@ -2,10 +2,10 @@ def singlyQuoted = 'Hello'
 pipeline {
     agent any
     environment {
-        CC = """{${sh
+        CC = """${sh(
                 returnStdOut: true,
                 script: 'echo "clang"'
-              }}"""
+              )}"""
     }
     stages {
         stage('Example') {

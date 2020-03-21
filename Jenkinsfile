@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
-                echo "BUILDIDは${env.BUILDID}on$[env.JENKINS_URL]"
+                echo "BUILDIDは ${env.BUILDID} on ${env.JENKINS_URL}"
             }
         }
     }

@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
-                sh 'printenv'
+                printenv
             }
         }
     }

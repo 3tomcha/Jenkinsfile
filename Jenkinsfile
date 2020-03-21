@@ -1,24 +1,11 @@
 pipeline {
     agent any 
     environment {
-        // Using returnStdout
-        CC = """${sh(
-                returnStdout: true,
-                script: 'echo "clang"'
-            )}""" 
-        // Using returnStatus
-        EXIT_STATUS = """${sh(
-                returnStatus: true,
-                script: 'exit 1'
-            )}"""
+        AWS_ACCESS_kEY_ID = credentials('jenkins-aws-secret-key-id')    
     }
     stages {
-        stage('Example') {
-            environment {
-                DEBUG_FLAGS = '-g'
-            }
+        stage('Example Stage1') {
             steps {
-                sh 'printenv'
             }
         }
     }

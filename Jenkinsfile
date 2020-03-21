@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
-                echo 'Deploying..'
+                def singlyQuoted = 'Hello'
+                echo "Helloは${singlyQuoted}"
             }
         }
     }

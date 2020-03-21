@@ -5,9 +5,12 @@ pipeline {
         CC = 'clang'
     }
     stages {
-        stage('Deploy') {
+        stage('Example') {
+            environment {
+                DEBUG_FLAGS = -1
+            }
             steps {
-                printenv
+                sh 'printenv'
             }
         }
     }

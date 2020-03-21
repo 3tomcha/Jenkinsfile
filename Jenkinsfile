@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
-                echo ${CC}
+                sh 'printenv'
             }
         }
     }

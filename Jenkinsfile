@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Example Stage1') {
             steps {
-                sh 'curl -u ${GITHUB_COMMON_CREDS_USR}:${GItHUB_COMMMON_CREDS_ID} 'https://api.github.com/user/repos''
+                sh 'curl -u ${GITHUB_COMMON_CREDS_USR}:${GITHUB_COMMON_CREDS_ID} 'https://api.github.com/user/repos''
             }
         }
     }

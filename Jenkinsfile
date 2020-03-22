@@ -6,7 +6,7 @@ pipeline {
                 GITHUB_COMMON_CREDS = credentials('github')    
             }
             steps {
-                sh 'curl -i https://api.github.com/users/octocat/orgs'
+                sh 'curl -u "$GITHUB_COMMON_CREDS_USR" https://api.github.com'
             }
         }
     }

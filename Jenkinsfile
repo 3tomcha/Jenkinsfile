@@ -6,7 +6,7 @@ pipeline {
                 GITHUB_COMMON_CREDS = credentials('github')    
             }
             steps {
-                sh 'curl -u ${GITHUB_COMMON_CREDS_USR}:${GITHUB_COMMON_CREDS_PASSWORD} 'https://api.github.com/user/repos''
+                sh 'curl -u ${GITHUB_COMMON_CREDS_USR}:${GITHUB_COMMON_CREDS_PSW} 'https://api.github.com/user/repos''
             }
         }
     }
